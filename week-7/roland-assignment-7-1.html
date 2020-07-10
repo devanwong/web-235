@@ -3,7 +3,7 @@
 ; Title:  Discussion 7.1
 ; Author: Jonathan Roland
 ; Date:   9 July 2020
-; Modified By: 
+; Modified By: Devan Wong
 ; Description: Javascript program that manipulates DOM, but with at least 2 errors.
 ; Expected Function: Clicking the 'Switch Colors' button will exchange the CSS text colors of the h1 and p elements.
 ;===========================================
@@ -24,14 +24,17 @@
     <script>
         var button = document.getElementById("my-button");
         button.addEventListener("click",function(){
-            switchColors;
+          // turned switchColors to switchColors() -- to turn into a function.
+            switchColors();
         },false);
         function switchColors(){
             var heading = document.getElementById("my-heading");
-            var paragraph = document.getElementByClass("my-paragraph");
+            // changed getElementByClass to getElementById
+            var paragraph = document.getElementById("my-paragraph");
             var headingColor = heading.style.color;
             var paragraphColor = paragraph.style.color;
-            heading.Style.color = paragraphColor;
+            // changed Style to style; incorrect structure. 
+            heading.style.color = paragraphColor;
             paragraph.style.color = headingColor;
         }
     </script>
